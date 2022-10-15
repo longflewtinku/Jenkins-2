@@ -3,10 +3,10 @@ pipeline {
     stages {
         stage {
             steps {
-            sh 'aws ec2 create-vpc `
-                --cidr-block "192.168.0.0/16" `
-                --region "ap-south-1" `
-                --tag-specification "ResourceType=vpc,Tags=[{Key=Name,Value=mumbaiVpc}]"'
+                sh 'aws ec2 create-vpc `
+                     --cidr-block "192.168.0.0/16" `
+                     --region "ap-south-1" `
+                     --tag-specification "ResourceType=vpc,Tags=[{Key=Name,Value=mumbaiVpc}]"'
             }    
         }
     }
